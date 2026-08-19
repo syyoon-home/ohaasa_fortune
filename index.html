@@ -7,7 +7,8 @@
 <meta name="description" content="일본 아사히방송 오하아사(おはよう朝日です) 별자리 운세를 매일 아침 한국어로. 생일을 입력하면 나만의 오늘 운세를 볼 수 있어요." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Jua&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" />
 <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -48,15 +49,28 @@
     <div class="field-row">
       <label>
         생년월일
-        <input type="date" id="birth-date" required />
+        <input
+          type="text"
+          id="birth-date"
+          inputmode="numeric"
+          placeholder="1997-03-14"
+          autocomplete="off"
+          required
+        />
       </label>
       <label>
         태어난 시간 <span class="optional">(선택, 사주 시주 계산용)</span>
-        <input type="time" id="birth-time" />
+        <input
+          type="text"
+          id="birth-time"
+          inputmode="numeric"
+          placeholder="13:30"
+          autocomplete="off"
+        />
       </label>
     </div>
     <button type="submit" class="btn-primary">오늘의 총운 보기</button>
-    <p class="form-note">입력한 정보는 이 브라우저에만 저장되며(로컬 저장), 서버로 전송되지 않아요.</p>
+    <p class="form-note">생년월일은 YYYY-MM-DD, 시간은 HH:MM 형식으로 입력해주세요. 입력한 정보는 이 브라우저에만 저장되며(로컬 저장), 서버로 전송되지 않아요.</p>
   </form>
 </section>
 
@@ -91,7 +105,6 @@
       </ul>
       <p class="manse-note">
         <span id="manse-note-text">60갑자 순환을 이용한 간이 계산이에요. 음력설 이전 출생자는 띠가 다를 수 있어요.</span>
-        정밀한 계산은 <a href="https://www.data.go.kr" target="_blank" rel="noopener">한국천문연구원 음양력 API</a> 연동으로 가능해요.
       </p>
     </article>
 

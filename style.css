@@ -19,8 +19,8 @@
   --radius: 20px;
   --shadow: 0 12px 30px -14px rgba(54, 42, 59, 0.25);
 
-  --font-display: "Gaegu", "Noto Sans KR", sans-serif;
-  --font-body: "Noto Sans KR", -apple-system, sans-serif;
+  --font-display: "Jua", "Noto Sans KR", sans-serif;
+  --font-body: "Pretendard", "Noto Sans KR", -apple-system, sans-serif;
 }
 
 * { box-sizing: border-box; }
@@ -176,9 +176,11 @@ a { color: inherit; }
 }
 .optional { font-weight: 400; color: #b3a4a8; font-size: 12px; }
 .field-row input {
+  box-sizing: border-box;
+  height: 48px;
   border: 1.5px solid var(--line);
   border-radius: 12px;
-  padding: 12px 14px;
+  padding: 0 14px;
   font-size: 15px;
   font-family: var(--font-body);
   color: var(--ink);
@@ -216,7 +218,7 @@ a { color: inherit; }
 .section-result { margin-top: 36px; }
 .result-grid {
   display: grid;
-  grid-template-columns: 1.3fr 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 16px;
 }
 @media (max-width: 700px) {
@@ -234,7 +236,10 @@ a { color: inherit; }
   margin: 0 0 10px;
   font-size: 20px;
 }
-.card--main { grid-row: span 2; position: relative; }
+.card--main {
+  grid-column: 1 / -1;
+  position: relative;
+}
 .card-badge {
   position: absolute;
   top: 20px;

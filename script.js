@@ -232,6 +232,30 @@ function animalFromYearGanji(yearGanjiText) {
   return ANIMALS[found] + "띠";
 }
 
+// 자유 텍스트로 입력된 날짜를 "YYYY-MM-DD"로 정규화 (1997-3-14, 1997.3.14, 1997/03/14 등 허용)
+function normalizeDateInput(raw) {
+  if (!raw) return null;
+  const m = raw.trim().match(/^(\d{4})[.\-\/\s]+(\d{1,2})[.\-\/\s]+(\d{1,2})$/);
+  if (!m) return null;
+  const year = Number(m[1]);
+  const month = Number(m[2]);
+  const day = Number(m[3]);
+  if (month < 1 || month > 12 || day < 1 || day > 31) return null;
+  return `${year}-${String(month).padStart(2, "0")}-${String(day).padStart(2, "0")}`;
+}
+
+// 자유 텍스트로 입력된 시간을 "HH:MM"으로 정규화 (13:30, 9:5, 930 등 허용). 빈 값은 "" 반환.
+function normalizeTimeInput(raw) {
+  if (!raw || !raw.trim()) return "";
+  const cleaned = raw.trim().replace(/\s/g, "");
+  const m = cleaned.match(/^(\d{1,2}):?(\d{2})$/);
+  if (!m) return null;
+  const hour = Number(m[1]);
+  const min = Number(m[2]);
+  if (hour > 23 || min > 59) return null;
+  return `${String(hour).padStart(2, "0")}:${String(min).padStart(2, "0")}`;
+}
+
 // ---------------------------------------------------------------------
 // 7. 초기화
 // ---------------------------------------------------------------------
@@ -249,10 +273,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
   form.addEventListener("submit", (e) => {
     e.preventDefault();
-    const date = dateInput.value;
-    const time = timeInput.value;
-    if (!date) return;
-    saveBirthInfo(date, time);
-    showFortuneFor(date);
+
+    const normalizedDate = normalizeDateInput(dateInput.value);
+    if (!normalizedDate) {
+      alert("생년월일을 예시처럼 입력해주세요. 예: 1997-03-14");
+      return;
+    }
+
+    const normalizedTime = normalizeTimeInput(timeInput.value);
+    if (normalizedTime === null) {
+      alert("태어난 시간을 예시처럼 입력해주세요. 예: 13:30 (모르면 비워두셔도 돼요)");
+      return;
+    }
+
+    dateInput.value = normalizedDate;
+    timeInput.value = normalizedTime;
+
+    saveBirthInfo(normalizedDate, normalizedTime);
+    showFortuneFor(normalizedDate);
   });
 });
