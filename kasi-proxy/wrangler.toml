@@ -1,0 +1,6 @@
+name = "ohaasa-kasi-proxy"
+main = "worker.js"
+compatibility_date = "2024-01-01"
+
+# 인증키는 여기 넣지 마세요! 아래 명령으로 별도 등록합니다.
+#   wrangler secret put KASI_SERVICE_KEY

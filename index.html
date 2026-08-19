@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>오하아사 — 오늘의 별자리 운세</title>
+<meta name="description" content="일본 아사히방송 오하아사(おはよう朝日です) 별자리 운세를 매일 아침 한국어로. 생일을 입력하면 나만의 오늘 운세를 볼 수 있어요." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ===================== 헤더 ===================== -->
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a href="index.html" class="logo">
+      <span class="logo-sun" aria-hidden="true"></span>
+      오하아사
+    </a>
+    <nav class="nav">
+      <a href="index.html" class="active">오늘의 운세</a>
+      <a href="columns.html">별자리 칼럼</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ===================== 히어로 ===================== -->
+<section class="hero">
+  <div class="hero-sky" aria-hidden="true">
+    <div class="sun"></div>
+    <div class="cloud cloud--1"></div>
+    <div class="cloud cloud--2"></div>
+    <div class="cloud cloud--3"></div>
+  </div>
+  <div class="wrap hero-inner">
+    <p class="eyebrow">おはよう朝日です · 매일 아침 번역</p>
+    <h1>오늘 하루,<br>별들은 뭐라고 할까요?</h1>
+    <p class="hero-sub">일본 오하아사 별자리 순위를 매일 새벽에 가져와 한국어로 옮겨드려요.<br>생일만 입력하면 내 운세부터 바로 확인!</p>
+  </div>
+</section>
+
+<!-- ===================== 생일 입력 폼 ===================== -->
+<section class="wrap section-form">
+  <form id="birth-form" class="birth-card">
+    <h2>내 운세 보러가기</h2>
+    <div class="field-row">
+      <label>
+        생년월일
+        <input type="date" id="birth-date" required />
+      </label>
+      <label>
+        태어난 시간 <span class="optional">(선택, 사주 시주 계산용)</span>
+        <input type="time" id="birth-time" />
+      </label>
+    </div>
+    <button type="submit" class="btn-primary">오늘의 총운 보기</button>
+    <p class="form-note">입력한 정보는 이 브라우저에만 저장되며(로컬 저장), 서버로 전송되지 않아요.</p>
+  </form>
+</section>
+
+<!-- ===================== 결과 카드 (JS로 채워짐) ===================== -->
+<section class="wrap section-result" id="result-section" hidden>
+  <div class="result-grid">
+
+    <article class="card card--main" id="card-main">
+      <div class="card-badge" id="today-rank-badge">-</div>
+      <h3 id="result-sign">-</h3>
+      <p class="result-meta" id="result-meta">-</p>
+      <p class="result-comment" id="result-comment">-</p>
+    </article>
+
+    <article class="card card--lucky" id="card-lucky">
+      <h3>오늘의 행운 아이템</h3>
+      <img id="lucky-product-image" class="lucky-product-image" alt="" hidden />
+      <p class="lucky-name" id="lucky-name">-</p>
+      <p class="lucky-price" id="lucky-price" hidden></p>
+      <a href="#" target="_blank" rel="noopener sponsored" id="lucky-link-coupang" class="btn-affiliate btn-affiliate--coupang">
+        쿠팡에서 보러가기 ↗
+      </a>
+      <p class="affiliate-disclosure">이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</p>
+    </article>
+
+    <article class="card card--manse" id="card-manse">
+      <h3>간단 만세력</h3>
+      <ul class="manse-list">
+        <li><span>별자리</span><b id="manse-zodiac">-</b></li>
+        <li><span>띠</span><b id="manse-animal">-</b></li>
+        <li><span>일주(사주)</span><b id="manse-ganji">-</b></li>
+      </ul>
+      <p class="manse-note">
+        <span id="manse-note-text">60갑자 순환을 이용한 간이 계산이에요. 음력설 이전 출생자는 띠가 다를 수 있어요.</span>
+        정밀한 계산은 <a href="https://www.data.go.kr" target="_blank" rel="noopener">한국천문연구원 음양력 API</a> 연동으로 가능해요.
+      </p>
+    </article>
+
+  </div>
+
+  <div class="ranking-wrap">
+    <h3>오늘의 전체 별자리 순위</h3>
+    <ol class="ranking-list" id="ranking-list"><!-- JS로 채움 --></ol>
+  </div>
+</section>
+
+<!-- 애드센스 슬롯 위치 예시 (실 서비스 시 발급받은 코드로 교체) -->
+<section class="wrap ad-slot">
+  <div class="ad-placeholder">광고 영역 (Google AdSense)</div>
+</section>
+
+<section class="wrap section-columns-cta">
+  <a href="columns.html" class="cta-card">
+    <div>
+      <p class="eyebrow">더 깊이 알고 싶다면</p>
+      <h3>12별자리 성격 &amp; 궁합 칼럼 보러가기</h3>
+    </div>
+    <span class="cta-arrow">→</span>
+  </a>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>본 서비스는 おはよう朝日です(ABC 아사히방송)의 별자리 운세를 참고하여 한국어로 요약·번역한 팬 제작 정보 서비스이며, 공식 서비스가 아닙니다.</p>
+    <p>운세는 참고용 콘텐츠이며, 중요한 결정은 신중하게 내리시길 바라요. © 오하아사 한국어 요약본</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

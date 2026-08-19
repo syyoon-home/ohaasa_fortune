@@ -1,0 +1,131 @@
+{
+  "date": "2026-08-19",
+  "source": "https://www.asahi.co.jp/ohaasa/week/horoscope/index.html",
+  "generated_at": "2026-08-19T07:00:00+09:00",
+  "fortunes": [
+    {
+      "rank": 1,
+      "sign_ja": "しし座",
+      "sign_ko": "사자자리",
+      "comment_ja": "",
+      "comment_ko": "오늘은 존재감이 확 살아나는 날. 하고 싶은 말은 망설이지 말고 꺼내보세요.",
+      "lucky_item_ja": "",
+      "lucky_item_ko": "빨간색 소품",
+      "lucky_item_category": "accessory",
+      "coupang_link": "https://link.coupang.com/a/EXAMPLE1",
+      "coupang_product_name": "레드 포인트 미니 파우치",
+      "coupang_product_image": "https://via.placeholder.com/300x300.png?text=Coupang+Product",
+      "coupang_product_price": "12900"
+    },
+    {
+      "rank": 2,
+      "sign_ja": "うお座",
+      "sign_ko": "물고기자리",
+      "comment_ja": "",
+      "comment_ko": "감이 예리해지는 하루. 직감을 믿고 움직이면 좋은 결과로 이어져요.",
+      "lucky_item_ja": "",
+      "lucky_item_ko": "좋아하는 뮤지션의 새 앨범",
+      "lucky_item_category": "album"
+    },
+    {
+      "rank": 3,
+      "sign_ja": "いて座",
+      "sign_ko": "사수자리",
+      "comment_ja": "",
+      "comment_ko": "새로운 걸 배우기 좋은 타이밍. 미뤄뒀던 책을 펼쳐보세요.",
+      "lucky_item_ja": "",
+      "lucky_item_ko": "여행 에세이 한 권",
+      "lucky_item_category": "book"
+    },
+    {
+      "rank": 4,
+      "sign_ja": "おうし座",
+      "sign_ko": "황소자리",
+      "comment_ja": "",
+      "comment_ko": "차분하게 페이스를 지키면 실수 없이 하루를 마무리할 수 있어요.",
+      "lucky_item_ja": "",
+      "lucky_item_ko": "향이 좋은 핸드크림",
+      "lucky_item_category": "accessory"
+    },
+    {
+      "rank": 5,
+      "sign_ja": "てんびん座",
+      "sign_ko": "천칭자리",
+      "comment_ja": "",
+      "comment_ko": "사람들과의 균형이 중요한 날. 한 발 양보하면 관계가 편해져요.",
+      "lucky_item_ja": "",
+      "lucky_item_ko": "감성 재즈 플레이리스트 앨범",
+      "lucky_item_category": "album"
+    },
+    {
+      "rank": 6,
+      "sign_ja": "みずがめ座",
+      "sign_ko": "물병자리",
+      "comment_ja": "",
+      "comment_ko": "엉뚱한 아이디어가 의외로 잘 통하는 날. 회의에서 발언해보세요.",
+      "lucky_item_ja": "",
+      "lucky_item_ko": "심플한 실버 귀걸이",
+      "lucky_item_category": "accessory"
+    },
+    {
+      "rank": 7,
+      "sign_ja": "ふたご座",
+      "sign_ko": "쌍둥이자리",
+      "comment_ja": "",
+      "comment_ko": "메시지를 주고받다 좋은 소식이 들려올 수 있어요. 답장은 바로바로.",
+      "lucky_item_ja": "",
+      "lucky_item_ko": "짧은 에세이집",
+      "lucky_item_category": "book"
+    },
+    {
+      "rank": 8,
+      "sign_ja": "やぎ座",
+      "sign_ko": "염소자리",
+      "comment_ja": "",
+      "comment_ko": "묵묵히 해온 노력이 슬슬 티가 나기 시작해요. 조금만 더 힘내봐요.",
+      "lucky_item_ja": "",
+      "lucky_item_ko": "가죽 다이어리",
+      "lucky_item_category": "accessory"
+    },
+    {
+      "rank": 9,
+      "sign_ja": "おひつじ座",
+      "sign_ko": "양자리",
+      "comment_ja": "",
+      "comment_ko": "속도 조절이 필요한 날. 너무 서두르면 놓치는 게 생겨요.",
+      "lucky_item_ja": "",
+      "lucky_item_ko": "밴드의 라이브 앨범",
+      "lucky_item_category": "album"
+    },
+    {
+      "rank": 10,
+      "sign_ja": "かに座",
+      "sign_ko": "게자리",
+      "comment_ja": "",
+      "comment_ko": "혼자만의 시간이 필요할 수 있어요. 무리하지 말고 컨디션을 챙기세요.",
+      "lucky_item_ja": "",
+      "lucky_item_ko": "허브차 세트",
+      "lucky_item_category": "accessory"
+    },
+    {
+      "rank": 11,
+      "sign_ja": "おとめ座",
+      "sign_ko": "처녀자리",
+      "comment_ja": "",
+      "comment_ko": "작은 실수가 눈에 밟히는 날. 한 번 더 확인하는 습관이 도움이 돼요.",
+      "lucky_item_ja": "",
+      "lucky_item_ko": "정리정돈 관련 책",
+      "lucky_item_category": "book"
+    },
+    {
+      "rank": 12,
+      "sign_ja": "さそり座",
+      "sign_ko": "전갈자리",
+      "comment_ja": "",
+      "comment_ko": "감정 기복이 클 수 있는 날. 큰 결정은 내일로 미뤄두는 게 안전해요.",
+      "lucky_item_ja": "",
+      "lucky_item_ko": "좋아하는 아티스트의 베스트 앨범",
+      "lucky_item_category": "album"
+    }
+  ]
+}
